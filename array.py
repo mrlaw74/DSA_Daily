@@ -21,9 +21,6 @@ n = len(my_arr)
 for i in range(n-1):
     for j in range(n-i-1):
         if my_arr[j] > my_arr[j+1]:
-            temp = my_arr[j+1]
-            my_arr[j] = my_arr[j+1]
-            my_arr[j+1] = temp
-            # my_arr[j], my_arr[j+1] = my_arr[j+1], my_arr[j]
+            my_arr[j], my_arr[j+1] = my_arr[j+1], my_arr[j]
 
 print(my_arr)
