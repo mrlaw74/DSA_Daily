@@ -55,11 +55,11 @@ print(arr)
 # 1
 #  times.
 
-my_array = [64, 34, 25, 5, 22, 11, 90, 12]
+my_array = [64, 34, 25, 5, 22, 11, 90, 120]
 
 n = len(my_array)
 
-for i in range (n-1):
+for i in range (n):
     min_val = my_array[i]
     for j in range (i+1, n):
         if my_array[j] < min_val:
@@ -69,3 +69,17 @@ for i in range (n-1):
     my_array.insert(i, min_val)
 
 print(my_array)
+
+# Burble sort
+arr = [2,4,5,6,7,3,9,1]
+
+n = len(arr)
+for i in range(n-1):
+    issorted = False
+    for j in range(n-i-1):
+        if arr[j] > arr[j+1]:
+            arr[j], arr[j+1] = arr[j+1], arr[j]
+            issorted = True
+    if issorted == False:
+        break
+print(arr)
