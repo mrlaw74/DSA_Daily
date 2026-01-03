@@ -83,3 +83,16 @@ for i in range(n-1):
     if issorted == False:
         break
 print(arr)
+
+
+# Selection sort
+arr = [3,5,7,9,2,4,6,8]
+
+n = len(arr)
+for i in range(n):
+    cur_val = arr[i]
+    for j in range (i+1, n):
+        if arr[j] < cur_val:
+            arr[j], arr[i] = arr[i], arr[j]
+print(arr)
+
